@@ -1,0 +1,21 @@
+{
+  "name": "ceste-ci-demo",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo para el máster CESTE: Node.js + Jest + Docker + SonarQube + Trivy",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "node src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "node scripts/build.js"
+  },
+  "author": "Francisco Romero",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -54,15 +54,13 @@ pipeline {
 
         stage('SonarQube / Quality') {
             steps {
-                withSonarQubeEnv('SonarQubeServer') {
-                    bat """
-                        sonar-scanner ^
-                          -Dsonar.projectKey=ceste-ci-demo ^
-                          -Dsonar.sources=. ^
-                          -Dsonar.host.url=%SONAR_HOST_URL% ^
-                          -Dsonar.login=%SONAR_TOKEN%
-                    """
-                }
+                bat """
+                    sonar-scanner ^
+                      -Dsonar.projectKey=ceste-ci-demo ^
+                      -Dsonar.sources=. ^
+                      -Dsonar.host.url=http://localhost:9000 ^
+                      -Dsonar.login=%SONAR_TOKEN%
+                """
             }
         }
 
